@@ -28,6 +28,7 @@ function d_alta($manejo, $vector)
 
   if ( !$coneccion->query($consulta))
     {
+     echo $coneccion; 
      echo "<a href=index.html>Error en la consulta</a>";
      exit;
     }

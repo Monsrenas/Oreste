@@ -18,7 +18,7 @@
             </div>
 
             <div class="col-md-4 col-xs-5 parrafo">
-              <div style="float: left;">
+              <div style="float: none;">
               <p class="text-justify" style="color: #GF6F6F;"><?php echo $_SESSION[evaluaciones_derecha];?></p> 
               </div>
               <form  style="color:black;" action="guardatestimonio.php" method="post" autocomplete="off">
@@ -41,7 +41,7 @@
                 <input name="localidad" type="text" id="lugar" placeholder="<?php echo $_SESSION[evaluaciones_ponlocal];?>" autofocus="" required="">
                 <br><br>
                 <p><label><?php echo $_SESSION[evaluaciones_testimonio];?></label></p>
-                <textarea rows="4" cols="35" name="mensaje"></textarea>
+                <textarea style="overflow: hidden;" rows="4" cols="30" name="mensaje"></textarea>
                 <p id="bot" ><input type="submit" id="submit" name="submit" value="<?php echo $_SESSION[evaluaciones_enviar];?>" class="boton" style="font-size: 1.5vw; float: none;"></p>
               </form>
           
