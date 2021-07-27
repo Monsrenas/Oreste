@@ -1,0 +1,125 @@
+body
+{
+	margin:	0px;
+	padding-top:5px;
+	background-image:  url("imagenes/tramaimpreso.png")!important;
+}
+
+.logo {
+	margin-top: 0%;
+	background: #222222;
+	color: white;
+	font-size: 1vw !important;
+	float: left;
+	width: 20%;
+	text-align: center !important;
+	align-content: center !important;
+	height: 30%;
+
+min-height: 30%;
+}
+
+.logo img {	width: 38%;
+			margin-top: 2%;
+			border: 2px solid #ffffff;
+			margin-left:0 auto;
+			float: none;
+			border-radius: 200px 200px 200px 200px;
+-moz-border-radius: 200px 200px 200px 200px;
+-webkit-border-radius: 200px 200px 200px 200px;
+padding: 10px;
+
+
+
+background: rgba(183,222,237,1);
+background: -moz-linear-gradient(top, rgba(183,222,237,1) 0%, rgba(113,206,239,1) 57%, rgba(33,180,226,1) 98%, rgba(183,222,237,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(183,222,237,1)), color-stop(57%, rgba(113,206,239,1)), color-stop(98%, rgba(33,180,226,1)), color-stop(100%, rgba(183,222,237,1)));
+background: -webkit-linear-gradient(top, rgba(183,222,237,1) 0%, rgba(113,206,239,1) 57%, rgba(33,180,226,1) 98%, rgba(183,222,237,1) 100%);
+background: -o-linear-gradient(top, rgba(183,222,237,1) 0%, rgba(113,206,239,1) 57%, rgba(33,180,226,1) 98%, rgba(183,222,237,1) 100%);
+background: -ms-linear-gradient(top, rgba(183,222,237,1) 0%, rgba(113,206,239,1) 57%, rgba(33,180,226,1) 98%, rgba(183,222,237,1) 100%);
+background: linear-gradient(to bottom, rgba(183,222,237,1) 0%, rgba(113,206,239,1) 57%, rgba(33,180,226,1) 98%, rgba(183,222,237,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b7deed', endColorstr='#b7deed', GradientType=0 );
+
+
+	}
+
+.nlogmbre { font-size: 2.4vw !important;
+			float: none;}
+.slogan {font-size: 1.0vw !important;
+		text-align: center !important;
+		align-content: center !important;
+		float: none;}
+
+.parrafo {
+	padding: 20px;
+	font-size: 1.3vw !important;
+	/*background-color: #0073B3;*/
+	background-color: #5CAAE0;
+
+    -webkit-box-shadow: 11px 10px 17px 1px rgba(0,0,0,0.45);
+    -moz-box-shadow: 11px 10px 17px 1px rgba(0,0,0,0.45);
+    box-shadow: 11px 10px 17px 1px rgba(0,0,0,0.45);
+	border:0px solid transparent;
+	color: black;}
+.parrafo h1 {text-align: center;font-size: 1.6vw !important;}
+.parrafo p {text-align: justify;}
+
+.notas{	background-color: white;
+	opacity: 0.5;
+	font-size: 1.0vw !important;
+}
+/* ejemplo 2 */
+.bloque {
+margin: 10% auto;
+width: 100%;
+
+height: 150px;
+		 	min-height: 150px;
+
+background-color: rgba(121,182,246,1);
+border: 1px solid #99cccc;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center !important;
+}
+.bloque {
+padding: 30px;
+
+}
+
+#form {
+  width: 250px;
+  margin: 0 auto;
+  height: 50px;
+}
+
+#form p {
+  text-align: right;
+}
+
+#form label {
+  font-size: 120px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+label {
+  color: grey;
+}
+
+.clasificacion {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+
+label:hover,
+label:hover ~ label {
+  color: #CCFF2F;
+}
+
+input[type="radio"]:checked ~ label {
+  color: #CCFF2F;
+}
