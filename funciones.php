@@ -1,60 +1,33 @@
-<?php
-// implementar la funcion alta pasandole un vector como argumento
+<?php 
 
-function d_abrir($el_manejo)
+function d_alta( $eval )
 {
-      $mysqli = new mysqli("localhost", "root", "", "accar");
-      if ($mysqli->connect_errno) {
-          echo "Fallo al conectar a MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
-      }
- return $mysqli;
-}	
+  
 
-function d_alta($manejo, $vector)
-{
-  $linea1="INSERT INTO ".$manejo['tabla']." (";
-  $linea2=" VALUES (";
-  foreach ($vector as $indice => $valor)
-  {
-      $linea1=$linea1."$indice,";
-      $linea2=$linea2."'$vector[$indice]',";
-  }
-   $linea1[strlen($linea1)-1]=")";
-   $linea2[strlen($linea2)-1]=")";
-   $consulta=$linea1.$linea2;
+ $tempArray=archivo_json('testimonial_list.json');
 
-  if ( ! $coneccion=d_abrir($manejo)) exit ;
- 
+ if ($tempArray) { array_Push($tempArray, $eval);} else { $tempArray=array("0"=>$eval);} 
 
-  if ( !$coneccion->query($consulta))
-    {
-     echo $coneccion; 
-     echo "<a href=index.html>Error en la consulta</a>";
-     exit;
-    }
+//Creamos el JSON
+$json_string = json_encode($tempArray);
+$file = 'testimonial_list.json';
+file_put_contents($file, $json_string);
+
 }
 
-function d_baja($manejo, $where)
+function archivo_json($file)
 {
-  if ( ! $coneccion=d_abrir($manejo)) exit ;
-	
-  $linea1="DELETE FROM ".$manejo['tabla'];
-  $linea2=" WHERE ".$where;
-  $consulta=$linea1.$linea2;
-  if ( !$coneccion->query($consulta))
-   {
-    echo "<a href=index.html>Error en el borrado</a>";
-    exit;
-   }
+	//Leemos el JSON
+	$datos = file_get_contents($file);
+	$json = json_decode($datos, true);
+
+	return $json;
 }
 
-function contenido ($manejo) {
-if ( ! $coneccion=d_abrir($manejo)) exit ;
+function Lista($file)
+{
+	$json=archivo_json($file);
 
-$consulta= "SELECT * FROM ".$manejo['tabla']." ORDER BY fecha";
-$resultado = $coneccion->query($consulta);
-
-
-  return $resultado;
+	return $json;
 }
 ?>

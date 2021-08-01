@@ -21,6 +21,4 @@
       include('textos.php');
     }
 
-    
-
  ?>

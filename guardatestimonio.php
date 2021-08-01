@@ -16,6 +16,8 @@ $v['puntos']=$valor;
 $v['testimonio']=$texto;
 $v['activo']=1;
 
-d_alta($vm,$v);
+d_alta($v);
 header("location:evaluaciones.php"); 
+
+
 ?>
