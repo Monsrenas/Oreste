@@ -35,7 +35,7 @@
 	<?php
 	include_once("funciones.php");
 	$star= "\u{272F}"; 
-	 $json=Lista('testimonial_list.json');
+	 $json=Lista('testimonios/testimonial_list.json');
 	 $json=array_reverse($json);
 		foreach ($json as $data) { 
 		 echo "<div class='eval'>";	

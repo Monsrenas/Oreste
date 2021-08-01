@@ -4,13 +4,13 @@ function d_alta( $eval )
 {
   
 
- $tempArray=archivo_json('testimonial_list.json');
+ $tempArray=archivo_json('testimonios/testimonial_list.json');
 
  if ($tempArray) { array_Push($tempArray, $eval);} else { $tempArray=array("0"=>$eval);} 
 
 //Creamos el JSON
 $json_string = json_encode($tempArray);
-$file = 'testimonial_list.json';
+$file = 'testimonios/testimonial_list.json';
 file_put_contents($file, $json_string);
 
 }
